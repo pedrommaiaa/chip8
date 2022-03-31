@@ -1,3 +1,5 @@
+use rand::random;
+
 // Chip-8 uses a 64X32 monochrome (1 bit per pixel) display.
 pub const SCREEN_WIDTH: usize = 64;
 pub const SCREEN_HEIGHT: usize = 32;
@@ -394,5 +396,4 @@ impl Cpu {
             (_, _, _, _) => unimplemented!("Unimplemeted opcode: {}", op),
         }
     }
-    
 }

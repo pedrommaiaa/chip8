@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chip-8 Emulator</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+        <style>
+            :root {
+                --terminal-color: #33ff66;
+            }
+            canvas {
+                image-rendering: -moz-crisp-edges;
+                image-rendering: -webkit-crisp-edges;
+                image-rendering: pixelated;
+                border: 1px solid var(--terminal-color);
+                padding: 5px;
+                margin-bottom: 20px;
+            }
+            body {
+                font-family: 'VT323', monospace;
+                font-size: 20px;
+                line-height: 22px;
+                color: var(--terminal-color);
+                background-color: black;
+            }
+            html {
+                text-align: center;
+                font-family: "Arial", "Helvetica", sans-serif;
+            }
+            button, select {
+                font-family: 'VT323', monospace;
+                font-size: 30px;
+                width: 100px;
+                border: 3px solid var(--terminal-color);
+                color: var(--terminal-color);
+                background-color: black;
+                outline: none;
+                margin-bottom: 10px;
+            }
+            select {
+                width: 200px;
+            }
+            button:active {
+                color: black;
+                background-color: var(--terminal-color);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Chip-8 Emulator</h1>
+        <span class='label'>ROM:</span>
+        <select id='roms'>
+            <option value='15PUZZLE'>15PUZZLE</option>
+            <option value='BLINKY'>BLINKY</option>
+            <option value='BLITZ'>BLITZ</option>
+            <option value='BRIX'>BRIX</option>
+            <option value='CONNECT4'>CONNECT4</option>
+            <option value='GUESS'>GUESS</option>
+            <option value='HIDDEN'>HIDDEN</option>
+            <option value='IBM'>IBM</option>
+            <option value='INVADERS'>INVADERS</option>
+            <option value='KALEID'>KALEID</option>
+            <option value='MAZE'>MAZE</option>
+            <option value='MERLIN'>MERLIN</option>
+            <option value='MISSILE'>MISSILE</option>
+            <option value='PONG'>PONG</option>
+            <option value='PONG2'>PONG2</option>
+            <option value='PUZZLE'>PUZZLE</option>
+            <option value='SYZYGY'>SYZYGY</option>
+            <option value='TANK'>TANK</option>
+            <option value='TETRIS'>TETRIS</option>
+            <option value='TICTAC'>TICTAC</option>
+            <option value='UFO'>UFO</option>
+            <option value='VBRIX'>VBRIX</option>
+            <option value='VERS'>VERS</option>
+            <option value='WIPEOFF'>WIPEOFF</option>
+        </select>
+        <button id='run'>Start</button>
+        <br />
+        <canvas id="canvas">If you see this message, then your browser doesn't support HTML5</canvas>
+    </body>
+    <script type="module" src="index.js"></script>
+</html>
