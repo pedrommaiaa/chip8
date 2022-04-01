@@ -18,7 +18,7 @@ You need to have [python3](https://www.python.org/downloads/) and
 
 4. In the main directory, run `make run`.
 
-5. Go to: `http://localhost:8000/`
+5. Go to: `http://127.0.0.1:8000/`
 
 6. Choose a game and enjoy.
 

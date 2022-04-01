@@ -38,7 +38,7 @@ async function run() {
 
         let rom = input.options[input.selectedIndex].value;
 
-        fetch(`../roms/${rom}`)
+        fetch(`roms/${rom}`)
             .then(i => i.arrayBuffer())
             .then(buffer => {
                 const result = new Uint8Array(buffer)
